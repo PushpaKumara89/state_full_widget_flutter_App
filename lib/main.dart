@@ -17,10 +17,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
       title: "Test app",
       home: const MyHome(),
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primarySwatch: Colors.deepPurple,
+
+      ),
       /*routes: <String, WidgetBuilder>{
         '/second': (context)=> const SecondScreen(),
       },*/
