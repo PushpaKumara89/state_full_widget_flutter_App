@@ -96,12 +96,32 @@ class ListsScreen extends StatelessWidget {
 
 
   Widget dynamicDataList(){
-    var items = List<String>.generate(100, (index) => 'items $index');
+    List<User> userList = [
+      User(name: 'John Smith', age: 28, city: 'New York'),
+      User(name: 'Emily Johnson', age: 35, city: 'Los Angeles'),
+      User(name: 'Michael Brown', age: 42, city: 'Chicago'),
+      User(name: 'Sarah Davis', age: 31, city: 'Houston'),
+      User(name: 'David Wilson', age: 24, city: 'Miami'),
+      User(name: 'Jessica Miller', age: 29, city: 'Seattle'),
+      User(name: 'Matthew Thompson', age: 37, city: 'Boston'),
+      User(name: 'Olivia Clark', age: 26, city: 'San Francisco'),
+      User(name: 'Daniel Martinez', age: 33, city: 'Dallas'),
+      User(name: 'Sophia Anderson', age: 39, city: 'Atlanta'),
+      User(name: 'William Lee', age: 22, city: 'Phoenix'),
+      User(name: 'Ava Thomas', age: 44, city: 'Denver'),
+      User(name: 'James Johnson', age: 31, city: 'Charlotte'),
+      User(name: 'Isabella Davis', age: 27, city: 'Portland'),
+      User(name: 'Logan Anderson', age: 36, city: 'San Diego'),
+      User(name: 'Mia Wilson', age: 25, city: 'Austin'),
+    ];
+    //var items = List<String>.generate(100, (index) => 'items $index');
     return ListView.builder(
-      itemCount: items.length,
+      itemCount: userList.length,
       itemBuilder: (context, index) {
         return ListTile(
-          title: Text(items[index]),
+          leading: const Icon(Icons.account_circle),
+          title: Text(userList[index].name),
+          subtitle: Text("Age ${userList[index].age}"),
         );
       },
 
@@ -143,4 +163,13 @@ class ListsScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+
+class User {
+  String name;
+  int age;
+  String city;
+
+  User({required this.name, required this.age, required this.city});
 }

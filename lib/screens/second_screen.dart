@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'home_page.dart';
 import 'lists_screen.dart';
+import 'text_fields.dart';
 
 
 class SecondScreen extends StatelessWidget {
@@ -31,7 +32,19 @@ class SecondScreen extends StatelessWidget {
                   );
                 },
                 icon: const Icon(Icons.list),
-          )
+          ),
+            IconButton(
+              onPressed: (){
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context){
+                          return const TextFields();
+                        }
+                    )
+                );
+              },
+              icon: const Icon(Icons.text_fields),
+            )
           ],
         ),
         body: Center(
