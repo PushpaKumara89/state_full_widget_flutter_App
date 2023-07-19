@@ -89,7 +89,7 @@ class _TextFieldsState extends State<TextFields> {
               ),
             ),
             // Text field Events //
-           /* Padding(
+            /* Padding(
               padding: const EdgeInsets.all(12.0),
               child: TextField(
                 cursorColor: Colors.red,
@@ -137,7 +137,6 @@ class _TextFieldsState extends State<TextFields> {
 }
 
 /*
-
 class TextFields extends StatelessWidget {
   const TextFields({super.key});
 

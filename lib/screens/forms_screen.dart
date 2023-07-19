@@ -75,10 +75,10 @@ class _FormsScreenState extends State<FormsScreen> {
                   onPressed: () {
                     if(_formKey.currentState!.validate()){
                       _formKey.currentState?.save();
-                      print("name: "+ _name+ " password : "+ _password);
+                      print("name: $_name password : $_password");
                     }
                   },
-                  child: Text("Save"),
+                  child: const Text("Save", style: TextStyle(fontSize: 16.2),),
                 )
               ],
             ),
